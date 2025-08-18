@@ -1,33 +1,53 @@
-# 💰 FinTrack-AI  
-> A Personal Finance Tracker with AI Assistant — built with **Spring Boot + React + MySQL**  
+# 💰 Personal Finance Tracker with AI
 
-FinTrack-AI helps you **manage expenses, track budgets, set saving goals, and chat with an AI assistant** to analyze your spending patterns.  
-It’s designed to be a **privacy-first** finance tool where your data stays with you.
+A full-stack web application to help users manage their finances, track expenses, set budgets, visualize insights, and get personalized AI-powered financial recommendations.  
 
----
-
-## 🚀 Tech Stack
-**Backend:** Java 17+, Spring Boot 3, Spring Security (JWT), JPA (Hibernate), MySQL  
-**Frontend:** React 18, Vite, TailwindCSS + shadcn/ui, Recharts  
-**Database:** MySQL 8 (InnoDB)  
-**AI (Phase 2):** NLP + Vector Search + LLM (for finance Q&A)  
-**Infra:** Docker Compose, Flyway, GitHub Actions (CI/CD)  
+Tech Stack:
+- **Backend:** Java Spring Boot  
+- **Frontend:** React.js  
+- **Database:** MySQL  
+- **AI Integration (Future):** Custom-trained chatbot for financial guidance  
 
 ---
 
-## ✨ Features
-- 🔐 User authentication & JWT-based security  
-- 👨‍👩‍👧 Households: single or shared finance tracking  
-- 🏦 Multi-account support (Bank, Wallet, Card, Cash)  
-- 📊 Transactions CRUD (Income / Expense / Transfer)  
-- 📂 Categories & recurring rules  
-- 🎯 Budgets & saving goals  
-- 📈 Dashboards & analytics (monthly spending, top categories)  
-- 🤖 AI Assistant (Phase 2) – natural language queries like:  
-  - *“How much did I spend on Food last month?”*  
-  - *“What’s my biggest expense category this year?”*  
-  - *“Am I on track with my savings goal?”*  
+## 🚀 Features
+
+- ✅ User authentication & profile management  
+- ✅ Expense tracking (income, expenses, categories, dates, payment methods)  
+- ✅ Budget management with alerts  
+- ✅ Visual dashboards & charts (monthly/yearly trends)  
+- ✅ Export reports (PDF/CSV)  
+- ✅ AI chatbot for personal finance tips (future enhancement)  
 
 ---
 
-## 🗂️ Project Structure
+## 🏗️ System Architecture
+
+```plaintext
+                ┌─────────────────────┐
+                │      Frontend       │
+                │    (React.js)       │
+                └─────────┬───────────┘
+                          │ REST API Calls (JSON)
+                ┌─────────▼───────────┐
+                │      Backend        │
+                │ (Spring Boot APIs)  │
+                └─────────┬───────────┘
+                          │ JPA/Hibernate
+                ┌─────────▼───────────┐
+                │     Database        │
+                │      (MySQL)        │
+                └─────────────────────┘
+
+       (Future) AI Chatbot ↔ Integrated with Backend
+# Clone the repository
+git clone https://github.com/your-username/personal-finance-tracker-ai.git
+cd personal-finance-tracker-ai/backend
+
+# Configure application.properties with your MySQL credentials
+# Run the application
+./mvnw spring-boot:run
+cd frontend
+npm install
+npm start
+CREATE DATABASE finance_tracker;
