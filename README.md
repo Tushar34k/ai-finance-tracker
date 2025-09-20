@@ -50,4 +50,4 @@ cd personal-finance-tracker-ai/backend
 cd frontend
 npm install
 npm start
-CREATE DATABASE finance_tracker;
+CREATE DATABASE finance_tracker_ai;
